@@ -1,1 +1,1 @@
-# CornMaze
+# Corn Maze
