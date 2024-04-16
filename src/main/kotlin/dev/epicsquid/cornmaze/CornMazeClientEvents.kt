@@ -15,7 +15,7 @@ object CornMazeClientEvents {
 		event.register(
 			{ state, world, pos, tintIndex ->
 				if (world != null && pos != null)
-					BiomeColors.getAverageGrassColor(world, pos)
+					BiomeColors.getAverageFoliageColor(world, pos)
 				else
 					-1
 			}, BlockRegistry.gourdStem, BlockRegistry.attachedGourdStem
