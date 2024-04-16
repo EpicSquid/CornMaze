@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cornmaze:block/attached_gourd_stem",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cornmaze:block/attached_gourd_stem"
+    },
+    "facing=south": {
+      "model": "cornmaze:block/attached_gourd_stem",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cornmaze:block/attached_gourd_stem",
+      "y": 270
+    }
+  }
+}

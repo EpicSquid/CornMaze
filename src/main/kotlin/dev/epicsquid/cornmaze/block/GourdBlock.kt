@@ -9,5 +9,5 @@ class GourdBlock(properties: Properties) : StemGrownBlock(properties) {
 
 	override fun getStem(): StemBlock = BlockRegistry.gourdStem
 
-	override fun getAttachedStem(): AttachedStemBlock = BlockRegistry.gourdAttachedStem
+	override fun getAttachedStem(): AttachedStemBlock = BlockRegistry.attachedGourdStem
 }

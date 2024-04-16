@@ -3,6 +3,7 @@ package dev.epicsquid.cornmaze.registry
 import dev.epicsquid.cornmaze.CornMaze
 import dev.epicsquid.cornmaze.food.FoodValues
 import net.minecraft.core.registries.Registries
+import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Item.Properties
 import net.minecraft.world.item.ItemNameBlockItem
@@ -21,7 +22,19 @@ object ItemRegistry {
 		Item(Properties().food(FoodValues.roasted_corn))
 	}
 
-	val gourdSeeds by REGISTRY.registerObject("gourd_seeds") {
+	val gourdSeeds: Item by REGISTRY.registerObject("gourd_seeds") {
 		ItemNameBlockItem(BlockRegistry.gourdStem, Properties())
+	}
+
+	val greenGourd: Item by REGISTRY.registerObject("green_gourd") {
+		BlockItem(BlockRegistry.greenGourd, Properties())
+	}
+
+	val yellowGourd: Item by REGISTRY.registerObject("yellow_gourd") {
+		BlockItem(BlockRegistry.yellowGourd, Properties())
+	}
+
+	val whiteGourd: Item by REGISTRY.registerObject("white_gourd") {
+		BlockItem(BlockRegistry.whiteGourd, Properties())
 	}
 }

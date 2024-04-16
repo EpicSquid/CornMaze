@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "cornmaze:block/green_gourd_top",
+    "side": "cornmaze:block/green_gourd_side"
+  }
+}

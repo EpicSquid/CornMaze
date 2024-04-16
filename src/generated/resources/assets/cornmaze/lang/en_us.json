@@ -1,0 +1,9 @@
+{
+  "block.cornmaze.green_gourd": "Green Gourd",
+  "block.cornmaze.white_gourd": "White Gourd",
+  "block.cornmaze.yellow_gourd": "Yellow Gourd",
+  "item.cornmaze.corn": "Corn",
+  "item.cornmaze.gourd_seeds": "Gourd Seeds",
+  "item.cornmaze.roasted_corn": "Roasted Corn",
+  "itemGroup.cornmaze.main": "Corn Maze"
+}

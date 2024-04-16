@@ -1,11 +1,10 @@
 package dev.epicsquid.cornmaze.registry
 
 import dev.epicsquid.cornmaze.CornMaze
-import dev.epicsquid.cornmaze.block.GourdAttachedStemBlock
+import dev.epicsquid.cornmaze.block.AttachedGourdStemBlock
 import dev.epicsquid.cornmaze.block.GourdBlock
 import dev.epicsquid.cornmaze.block.GourdStemBlock
 import net.minecraft.core.registries.Registries
-import net.minecraft.world.level.block.PumpkinBlock
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument.DIDGERIDOO
@@ -25,22 +24,6 @@ object BlockRegistry {
 		.instabreak()
 		.sound(SoundType.HARD_CROP)
 		.pushReaction(DESTROY)
-
-	val gourdStem by REGISTRY.registerObject("gourd_stem") {
-		GourdStemBlock(
-			listOf(greenGourd),
-			{ ItemRegistry.gourdSeeds },
-			gourdStemProps
-		)
-	}
-
-	val gourdAttachedStem by REGISTRY.registerObject("gourd_attached_stem") {
-		GourdAttachedStemBlock(
-			listOf(greenGourd),
-			{ ItemRegistry.gourdSeeds },
-			gourdStemProps
-		)
-	}
 
 	val greenGourd by REGISTRY.registerObject("green_gourd") {
 		GourdBlock(
@@ -72,6 +55,22 @@ object BlockRegistry {
 				.strength(1.0f)
 				.sound(SoundType.WOOD)
 				.pushReaction(DESTROY)
+		)
+	}
+
+	val gourdStem by REGISTRY.registerObject("gourd_stem") {
+		GourdStemBlock(
+			listOf(greenGourd, yellowGourd, whiteGourd),
+			{ ItemRegistry.gourdSeeds },
+			gourdStemProps
+		)
+	}
+
+	val attachedGourdStem by REGISTRY.registerObject("attached_gourd_stem") {
+		AttachedGourdStemBlock(
+			listOf(greenGourd, yellowGourd, whiteGourd),
+			{ ItemRegistry.gourdSeeds },
+			gourdStemProps
 		)
 	}
 }

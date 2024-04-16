@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.StemBlock
 import net.minecraft.world.level.block.StemGrownBlock
 import net.minecraft.world.level.block.state.BlockState
 
-class GourdAttachedStemBlock(
+class AttachedGourdStemBlock(
 	private val fruits: List<StemGrownBlock>,
 	seedSupplier: () -> Item,
 	properties: Properties

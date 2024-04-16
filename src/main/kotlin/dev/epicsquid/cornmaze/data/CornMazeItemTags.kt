@@ -6,6 +6,7 @@ import dev.epicsquid.squidink.utils.forgeTag
 import net.minecraft.core.HolderLookup.Provider
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.ItemTagsProvider
+import net.minecraftforge.common.Tags
 import net.minecraftforge.common.data.BlockTagsProvider
 import net.minecraftforge.common.data.ExistingFileHelper
 import java.util.concurrent.CompletableFuture
