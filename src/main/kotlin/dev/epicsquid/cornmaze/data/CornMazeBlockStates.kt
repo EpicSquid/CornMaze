@@ -48,7 +48,8 @@ class CornMazeBlockStates(
 		)
 
 		stageBlock(BlockRegistry.gourdStem, BlockStateProperties.AGE_7) { name, stage ->
-			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "stem", mcLoc("block/pumpkin_stem")).renderType("cutout")
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "stem", mcLoc("block/pumpkin_stem"))
+				.renderType("cutout")
 		}
 
 		horizontalBlock(
