@@ -16,7 +16,7 @@ class CornTopBlock(props: Properties) : Block(props) {
 	}
 
 	init {
-		registerDefaultState(stateDefinition.any().setValue(CornBaseBlock.AGE, 0))
+		registerDefaultState(stateDefinition.any().setValue(AGE, 0))
 	}
 
 	override fun getShape(

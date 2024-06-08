@@ -1,6 +1,9 @@
 package dev.epicsquid.cornmaze.data
 
 import dev.epicsquid.cornmaze.CornMaze
+import dev.epicsquid.cornmaze.block.CornBaseBlock
+import dev.epicsquid.cornmaze.block.CornMiddleBlock
+import dev.epicsquid.cornmaze.block.CornTopBlock
 import dev.epicsquid.cornmaze.registry.BlockRegistry
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
@@ -52,18 +55,18 @@ class CornMazeBlockStates(
 				.renderType("cutout")
 		}
 
-		stageBlock(BlockRegistry.cornBase, BlockStateProperties.AGE_7) { name, stage ->
-			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "crop", modLoc("$BLOCK_FOLDER/corn_base$stage"))
+		stageBlock(BlockRegistry.cornBase, CornBaseBlock.AGE) { name, stage ->
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/cross"), "cross", modLoc("$BLOCK_FOLDER/corn_base$stage"))
 				.renderType("cutout")
 		}
 
-		stageBlock(BlockRegistry.cornMiddle, BlockStateProperties.AGE_4) { name, stage ->
-			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "crop", mcLoc("$BLOCK_FOLDER/corn_middle$stage"))
+		stageBlock(BlockRegistry.cornMiddle, CornMiddleBlock.AGE) { name, stage ->
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/cross"), "cross", modLoc("$BLOCK_FOLDER/corn_middle$stage"))
 				.renderType("cutout")
 		}
 
-		stageBlock(BlockRegistry.cornTop, BlockStateProperties.AGE_2) { name, stage ->
-			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "crop", mcLoc("$BLOCK_FOLDER/corn_top$stage"))
+		stageBlock(BlockRegistry.cornTop, CornTopBlock.AGE) { name, stage ->
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/cross"), "cross", modLoc("$BLOCK_FOLDER/corn_top$stage"))
 				.renderType("cutout")
 		}
 

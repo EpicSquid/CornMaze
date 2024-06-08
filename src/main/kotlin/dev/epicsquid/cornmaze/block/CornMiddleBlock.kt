@@ -16,7 +16,7 @@ class CornMiddleBlock(props: Properties) : Block(props) {
 	}
 
 	init {
-		registerDefaultState(stateDefinition.any().setValue(CornBaseBlock.AGE, 0))
+		registerDefaultState(stateDefinition.any().setValue(AGE, 0))
 	}
 
 	override fun getShape(
@@ -27,6 +27,7 @@ class CornMiddleBlock(props: Properties) : Block(props) {
 	): VoxelShape = SHAPE
 
 	override fun createBlockStateDefinition(builder: Builder<Block, BlockState>) {
+		super.createBlockStateDefinition(builder)
 		builder.add(AGE)
 	}
 }

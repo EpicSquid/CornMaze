@@ -1,4 +1,5 @@
-// 1.20.1	2024-04-16T12:45:42.2235408	Loot Tables
+// 1.20.1	2024-06-08T21:39:16.430074	Loot Tables
+ca56e4aef84a87e66bfbd84e9cf43b2a7705ce9a data/cornmaze/loot_tables/blocks/corn_top.json
 9c18aa8ee202f695c5fb95e4117573abe1f7b66f data/cornmaze/loot_tables/blocks/green_gourd.json
 708411624f37b32b44369326df9b3b4e8aeae5fd data/cornmaze/loot_tables/blocks/white_gourd.json
 216b30f6bf800bcaf91d2be28e7c9a6802011983 data/cornmaze/loot_tables/blocks/yellow_gourd.json

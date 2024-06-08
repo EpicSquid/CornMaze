@@ -1,10 +1,7 @@
 package dev.epicsquid.cornmaze.registry
 
 import dev.epicsquid.cornmaze.CornMaze
-import dev.epicsquid.cornmaze.block.AttachedGourdStemBlock
-import dev.epicsquid.cornmaze.block.CornBaseBlock
-import dev.epicsquid.cornmaze.block.GourdBlock
-import dev.epicsquid.cornmaze.block.GourdStemBlock
+import dev.epicsquid.cornmaze.block.*
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties
@@ -87,10 +84,10 @@ object BlockRegistry {
 	}
 
 	val cornMiddle by REGISTRY.registerObject("corn_middle") {
-		CornBaseBlock(cornProps)
+		CornMiddleBlock(cornProps)
 	}
 
 	val cornTop by REGISTRY.registerObject("corn_top") {
-		CornBaseBlock(cornProps)
+		CornTopBlock(cornProps)
 	}
 }
