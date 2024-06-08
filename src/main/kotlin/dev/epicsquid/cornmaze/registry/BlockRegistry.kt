@@ -2,6 +2,7 @@ package dev.epicsquid.cornmaze.registry
 
 import dev.epicsquid.cornmaze.CornMaze
 import dev.epicsquid.cornmaze.block.AttachedGourdStemBlock
+import dev.epicsquid.cornmaze.block.CornBaseBlock
 import dev.epicsquid.cornmaze.block.GourdBlock
 import dev.epicsquid.cornmaze.block.GourdStemBlock
 import net.minecraft.core.registries.Registries
@@ -72,5 +73,24 @@ object BlockRegistry {
 			{ ItemRegistry.gourdSeeds },
 			gourdStemProps
 		)
+	}
+
+	val cornProps = Properties.of()
+		.mapColor(MapColor.PLANT)
+		.noCollission()
+		.instabreak()
+		.sound(SoundType.CROP)
+		.pushReaction(DESTROY)
+
+	val cornBase by REGISTRY.registerObject("corn_base") {
+		CornBaseBlock(cornProps.randomTicks())
+	}
+
+	val cornMiddle by REGISTRY.registerObject("corn_middle") {
+		CornBaseBlock(cornProps)
+	}
+
+	val cornTop by REGISTRY.registerObject("corn_top") {
+		CornBaseBlock(cornProps)
 	}
 }

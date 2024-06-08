@@ -52,6 +52,21 @@ class CornMazeBlockStates(
 				.renderType("cutout")
 		}
 
+		stageBlock(BlockRegistry.cornBase, BlockStateProperties.AGE_7) { name, stage ->
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "crop", modLoc("$BLOCK_FOLDER/corn_base$stage"))
+				.renderType("cutout")
+		}
+
+		stageBlock(BlockRegistry.cornMiddle, BlockStateProperties.AGE_4) { name, stage ->
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "crop", mcLoc("$BLOCK_FOLDER/corn_middle$stage"))
+				.renderType("cutout")
+		}
+
+		stageBlock(BlockRegistry.cornTop, BlockStateProperties.AGE_2) { name, stage ->
+			models().singleTexture(name, mcLoc("$BLOCK_FOLDER/stem_growth$stage"), "crop", mcLoc("$BLOCK_FOLDER/corn_top$stage"))
+				.renderType("cutout")
+		}
+
 		horizontalBlock(
 			BlockRegistry.attachedGourdStem, models()
 				.withExistingParent(BlockRegistry.attachedGourdStem.resourceLocation.path, mcLoc("$BLOCK_FOLDER/stem_fruit"))

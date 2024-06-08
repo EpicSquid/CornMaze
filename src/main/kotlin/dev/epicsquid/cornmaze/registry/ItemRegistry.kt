@@ -15,7 +15,7 @@ object ItemRegistry {
 	val REGISTRY = DeferredRegister.create(Registries.ITEM, CornMaze.MODID)
 
 	val corn by REGISTRY.registerObject("corn") {
-		Item(Properties().food(FoodValues.corn))
+		ItemNameBlockItem(BlockRegistry.cornBase, Properties().food(FoodValues.corn))
 	}
 
 	val roastedCorn by REGISTRY.registerObject("roasted_corn") {
